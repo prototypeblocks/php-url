@@ -29,6 +29,20 @@ class Url {
 	}
 
 	/** 
+    * Check if the current url / request is over HTTPS. 
+    * @return boolean 
+    */ 
+	public static function isHttps() {
+
+		if (!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] !== 'off') {
+
+			return true;
+		}
+
+		return false;
+	}
+
+	/** 
     * Redirect to page (set headers). 
     * @param string go to url 
     */ 
